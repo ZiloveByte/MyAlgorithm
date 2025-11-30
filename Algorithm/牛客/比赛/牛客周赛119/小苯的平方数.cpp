@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+constexpr int MOD=998244353;
+
+using ll=long long;
+using ull=unsigned long long;
+
+void Nuyoah();
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int t;
+    cin>>t;
+    while(t--) Nuyoah();
+    return 0;
+}
+
+void Nuyoah(){
+    int l,r;
+    cin>>l>>r;
+    int ans=0;
+    if(l<=1&&1<=r) ans++;
+    if(l<=9&&9<=r) ans++;
+    cout<<ans<<"\n";
+}

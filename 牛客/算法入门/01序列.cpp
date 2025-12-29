@@ -9,21 +9,21 @@ using u128 = unsigned __int128;
 using i128 = __int128;
  
 void solve() {
-    int n;
+    i64 m,cnt=0,n;
+    cin>>m;
+    vector<i64> a(m);
+    for(int i=0;i<m;i++) cin>>a[i];
     cin>>n;
-    for(int i=0;i<n;i++){
-        int val;
-        cin>>val;
-        cout<<n+1-val<<" ";
+    for(int i=0;i<m-2;i++){
+        if(a[i]==0&&a[i+1]==0&&a[i+2]==0) cnt++,i++;
     }
-    cout<<"\n";
+    if(cnt<n) cout<<"false\n";
+    else cout<<"true\n";
 }
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t;
-    cin>>t;
-    while(t--) solve();
+    solve();
     return 0;
 }

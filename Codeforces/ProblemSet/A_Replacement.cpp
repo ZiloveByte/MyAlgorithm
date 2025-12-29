@@ -11,19 +11,19 @@ using i128 = __int128;
 void solve() {
     int n;
     cin>>n;
-    for(int i=0;i<n;i++){
-        int val;
-        cin>>val;
-        cout<<n+1-val<<" ";
-    }
-    cout<<"\n";
+    vector<i64> a(n);
+    for(int i=0;i<n;i++) cin>>a[i];
+    sort(a.begin(),a.end(),greater<i64>());
+    if(a[0]==1) a[0]=2;
+    else a[0]=1;
+    sort(a.begin(),a.end());
+    for(int i=0;i<n;i++) cout<<a[i]<<' ';
+    return;
 }
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    int t;
-    cin>>t;
-    while(t--) solve();
+    solve();
     return 0;
-}
+}  

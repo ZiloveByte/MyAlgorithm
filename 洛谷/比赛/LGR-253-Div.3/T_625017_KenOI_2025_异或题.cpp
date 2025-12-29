@@ -9,14 +9,7 @@ using u128 = unsigned __int128;
 using i128 = __int128;
  
 void solve() {
-    int n;
-    cin>>n;
-    for(int i=0;i<n;i++){
-        int val;
-        cin>>val;
-        cout<<n+1-val<<" ";
-    }
-    cout<<"\n";
+    
 }
  
 int main(){

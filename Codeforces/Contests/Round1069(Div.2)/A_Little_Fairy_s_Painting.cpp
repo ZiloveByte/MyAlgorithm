@@ -4,19 +4,26 @@ using namespace std;
 using i64 = long long;
 using u64 = unsigned long long;
 using u32 = unsigned;
- 
+
 using u128 = unsigned __int128;
 using i128 = __int128;
  
 void solve() {
-    int n;
+    i64 n;
     cin>>n;
+    set<i64> a;
     for(int i=0;i<n;i++){
         int val;
         cin>>val;
-        cout<<n+1-val<<" ";
+        a.insert(val);
     }
-    cout<<"\n";
+    i64 lens=a.size();
+    while (a.find(lens)==a.end()) {
+        a.insert(lens);
+        lens++;
+    }
+    cout<<lens<<"\n";
+    return;
 }
  
 int main(){

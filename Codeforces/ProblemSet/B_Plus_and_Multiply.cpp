@@ -21,7 +21,7 @@ void solve() {
         }
     }
     i64 val=n%b;
-    for(int i=1;i<=n;i*=a){
+    for(i64 i=1;i<=n;i*=a){
         if(i%b==val){
             cout<<"Yes\n";
             return;
